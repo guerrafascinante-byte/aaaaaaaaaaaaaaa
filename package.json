@@ -12,6 +12,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.93.2",
     "express": "^5.2.1",
+    "cors": "^2.8.5",
     "node-fetch": "^2.6.1"
   }
 }
