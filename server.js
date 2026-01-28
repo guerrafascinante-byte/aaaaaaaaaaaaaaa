@@ -20,8 +20,10 @@ const LICENSE_TABLE = 'licenses';
 // --- INICIALIZAÇÃO ---
 const app = express();
 const port = 3000;
+const cors = require('cors'); // Importar cors
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+app.use(cors()); // Habilitar CORS para todas as origens
 app.use(express.json());
 
 // --- MIDDLEWARE DE AUTENTICAÇÃO DE CHAVE ---
