@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 // --- CONFIGURAÇÃO ---
 // Substitua pelos seus dados do Supabase
-const SUPABASE_URL = 'https://supabase.com/dashboard/project/aypdymvyiunbsyxfwisc';
+const SUPABASE_URL = 'https://aypdymvyiunbsyxfwisc.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5cGR5bXZ5aXVuYnN5eGZ3aXNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk1NTEyNjUsImV4cCI6MjA4NTEyNzI2NX0.qSRwGEORbSwZDehtDq1uTpUloclg3Dk4O4O8SD8VhyA';
 const FIREBASE_API_KEY = 'AIzaSyD5z6B7C8D9E0F1G2H3I4J5K6L7M8N9O0'; // Chave de API do Lovable (pode ser obtida no código da extensão original)
 
