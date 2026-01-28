@@ -36,14 +36,14 @@ async function authenticateLicense(req, res, next) {
         const { data, error } = await supabase
             .from(LICENSE_TABLE)
             .select('*')
-            .eq('key', licenseKey)
+            .eq('license_key', licenseKey) // Corrigido: nome da coluna
             .single();
 
         if (error || !data) {
             return res.status(403).json({ success: false, error: { code: 'AUTH_001', message: 'Invalid or expired license' } });
         }
 
-        if (!data.is_active || (data.expires_at && new Date(data.expires_at) < new Date())) {
+        if (data.is_active === false || (data.expires_at && new Date(data.expires_at) < new Date())) {
             return res.status(403).json({ success: false, error: { code: 'AUTH_002', message: 'License expired or inactive' } });
         }
 
@@ -132,7 +132,7 @@ app.post('/v1/radioai-authorization', async (req, res) => {
         const { data, error } = await supabase
             .from(LICENSE_TABLE)
             .select('*')
-            .eq('key', licenseKey)
+            .eq('license_key', licenseKey) // Corrigido: nome da coluna
             .single();
 
         if (error || !data) {
@@ -140,15 +140,15 @@ app.post('/v1/radioai-authorization', async (req, res) => {
         }
 
         // Simular o retorno de um token JWT (não é necessário, mas emula o original)
-        const mockToken = `MOCK_JWT_FOR_${data.key}`;
+        const mockToken = `MOCK_JWT_FOR_${data.license_key}`;
 
         res.json({
             success: true,
             data: {
                 token: mockToken,
                 license: {
-                    key: data.key,
-                    is_active: data.is_active,
+                    key: data.license_key, // Corrigido: mapear da coluna certa
+                    is_active: data.is_active !== false, // Garantir boolean
                     expires_at: data.expires_at,
                     plan: data.plan,
                     requests_today: data.requests_today || 0,
