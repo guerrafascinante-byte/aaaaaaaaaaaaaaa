@@ -13,8 +13,8 @@
     }
   ],
   "env": {
-    "SUPABASE_URL": "https://aypdymvyiunbsyxfwisc.supabase.co",
-    "SUPABASE_SERVICE_ROLE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5cGR5bXZ5aXVuYnN5eGZ3aXNjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2OTU1MTI2NSwiZXhwIjoyMDg1MTI3MjY1fQ.E98F5zCKuxcwuEE2Ktt_7gKtZk4SgRyns_PKbsmjaYQ",
-    "JWT_SECRET": "opensslrand-base6432"
+    "SUPABASE_URL": "@supabase-url",
+    "SUPABASE_SERVICE_ROLE_KEY": "@supabase-service-role-key",
+    "JWT_SECRET": "@jwt-secret"
   }
 }
