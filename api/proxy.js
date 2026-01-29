@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import jwt from 'jsonwebtoken';
+import fetch from 'node-fetch'; // Importação explícita para compatibilidade
 
 // Configuração do Supabase
 const supabase = createClient(
