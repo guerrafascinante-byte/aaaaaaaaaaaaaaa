@@ -2,11 +2,11 @@
   "name": "lovable-pro-extension",
   "version": "1.0.0",
   "description": "Extensão Chrome para Lovable.dev com sistema de licenças próprio",
-  "type": "module"
+  "type": "module",
   "main": "api/auth.js",
   "engines": {
     "node": "20.x"
-  }
+  },
   "scripts": {
     "dev": "vercel dev",
     "deploy": "vercel --prod"
