@@ -1,0 +1,25 @@
+{
+  "name": "lovable-pro-extension",
+  "version": "1.0.0",
+  "description": "Extensão Chrome para Lovable.dev com sistema de licenças próprio",
+  "main": "api/auth.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "lovable",
+    "chrome-extension",
+    "vercel",
+    "supabase"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}
